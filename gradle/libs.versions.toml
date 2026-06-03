@@ -9,6 +9,10 @@ ktfmt-plugin = "0.26.0"
 ktfmt = "0.63"
 pluginPublish = "2.1.1"
 truth = "1.4.5"
+junitVersion = "4.13.2"
+runner = "1.0.2"
+espressoCore = "3.0.2"
+appcompatV7 = "28.0.0"
 
 [plugins]
 android-kmp-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
@@ -19,6 +23,7 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 ktfmt = { id = "com.ncorti.ktfmt.gradle", version.ref = "ktfmt-plugin" }
 pluginPublish = { id = "com.gradle.plugin-publish", version.ref = "pluginPublish" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 [libraries]
 agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
@@ -28,3 +33,7 @@ jupiter-platform-launcher = { module = "org.junit.platform:junit-platform-launch
 truth = { module = "com.google.truth:truth", version.ref = "truth" }
 diffUtils = { module = "io.github.java-diff-utils:java-diff-utils", version.ref = "diffUtils" }
 ktfmt = { module = "com.facebook:ktfmt", version.ref = "ktfmt" }
+junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
+runner = { group = "com.android.support.test", name = "runner", version.ref = "runner" }
+espresso-core = { group = "com.android.support.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat-v7 = { group = "com.android.support", name = "appcompat-v7", version.ref = "appcompatV7" }
