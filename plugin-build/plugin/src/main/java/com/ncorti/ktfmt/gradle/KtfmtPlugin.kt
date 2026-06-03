@@ -62,7 +62,9 @@ public abstract class KtfmtPlugin : Plugin<Project> {
         createScriptsTasks(project, project.projectDir, topLevelFormat, topLevelCheck)
 
         project.plugins.withId("kotlin") { applyKtfmt(project, ktfmtExtension) }
+        println("IM-DEBUG: This should show up...")
         project.plugins.withId("kotlin-android") {
+            println("IM-DEBUG: I am guessing this will never show up in logs...")
             if (project.plugins.hasPlugin("org.jetbrains.kotlin.multiplatform")) {
                 project.logger.i("Skipping Android task creation, as KMP is applied")
             } else {
