@@ -63,6 +63,11 @@ public abstract class KtfmtPlugin : Plugin<Project> {
 
         project.plugins.withId("kotlin") { applyKtfmt(project, ktfmtExtension) }
         println("IM-DEBUG: This should show up...")
+        if (project.name == "debug") {
+            project.plugins.forEach { plugin ->
+                println("IM-DEBUG Plugin: ${plugin::class.qualifiedName}")
+            }
+        }
         project.plugins.withId("kotlin-android") {
             println("IM-DEBUG: I am guessing this will never show up in logs...")
             if (project.plugins.hasPlugin("org.jetbrains.kotlin.multiplatform")) {
