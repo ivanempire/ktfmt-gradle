@@ -3,13 +3,14 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("com.ncorti.ktfmt.gradle")
 }
+
+ktfmt { kotlinLangStyle() }
 
 android {
     namespace = "com.ivanempire.debug"
-    compileSdk {
-        version = release(33)
-    }
+    compileSdk { version = release(33) }
 
     defaultConfig {
         minSdk = 26
@@ -22,7 +23,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlin { compilerOptions { jvmTarget = JvmTarget.JVM_17 } }
-
 }
 
 dependencies {
