@@ -1,5 +1,3 @@
 package com.ivanempire.debug
 
-object SampleObject {
-    val number = 4
-}
+object SampleObject { val number = 4 }
